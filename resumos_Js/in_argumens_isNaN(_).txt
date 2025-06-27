@@ -1,0 +1,33 @@
+	ARGUMENTS
+
+ arguments é um objeto local tipo-array que está disponível dentro de todas as funções declaradas com a palavra-chave function (ou seja, não em arrow functions). Ele te dá acesso a todos os argumentos que foram passados para a função, independentemente de quantos parâmetros você definiu na assinatura da função.
+
+--*Linguagem Técnica*: É um objeto Array-like (não um Array real) que contém uma entrada para cada argumento passado para a função, indexadas numericamente. Possui a propriedade length.
+
+--*Linguagem Simples*: Imagine que cada vez que você chama uma função "tradicional" (não uma setinha =>), ela recebe uma sacolinha com todos os presentes (argumentos) que você jogou para ela. O arguments é essa sacolinha. Você pode olhar dentro dela (arguments[0], arguments[1]) e ver quantos presentes tem (arguments.length), mesmo que a função só esperasse um ou dois.
+
+
+	isNaN()
+
+--*Linguagem Técnica*: A função isNaN() tenta converter o valor passado para um número. Se a conversão resultar em NaN (Not-a-Number), a função retorna true. Caso contrário, retorna false. É importante notar que isNaN() tem um comportamento peculiar com alguns tipos de dados (como strings vazias ou null), que são convertidos para 0 antes da verificação, resultando em false.
+
+--*Linguagem Simples*: Pense no isNaN() como um "detetive de números". Você entrega a ele algo, e ele te diz: "Isso que você me deu não faz sentido como um número." Por exemplo, isNaN("olá") é verdadeiro, porque "olá" não é um número. Mas isNaN("123") é falso, porque "123" pode ser transformado em um número. E aqui vai uma pegadinha: isNaN(null) é falso, porque o JavaScript considera null como 0 em alguns contextos numéricos, e 0 é um número!
+
+--*Circunstância de Uso*:
+
+-Validação de Entrada: Muito útil para verificar se um valor que o usuário digitou (que geralmente vem como string) pode ser usado em cálculos matemáticos.
+
+-Prevenção de Erros: Evitar que operações matemáticas resultem em NaN em suas variáveis.
+
+
+--**Desvendando o Operador in**
+
+ in é um operador independente em JavaScript que serve para verificar se uma propriedade existe em um objeto (ou em sua cadeia de protótipos).
+
+--*Linguagem Simples*: Imagine que você tem uma caixa (um objeto) com várias gavetas (propriedades). O operador in é como perguntar: "Essa gaveta de nome 'X' existe nesta caixa ou em alguma caixa que ela herdou?". Ele não se importa se a gaveta está vazia, apenas se ela está lá.
+
+--*Circunstância de Uso*:
+
+ Verificação de Propriedades: Antes de tentar acessar uma propriedade que pode não existir, evitando erros.
+
+ Checagem em Objetos Configuração: Se uma função espera um objeto de configuração, você pode usar in para verificar se opções específicas foram fornecidas.
