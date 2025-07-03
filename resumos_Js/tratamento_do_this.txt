@@ -1,0 +1,11 @@
+
+
+	***TRATAMENTO DO 'THIS' EM FUNCÕES***
+
+
+*FUNCTION NOME() {} TRADICIONAL: O 'this' depende de como a função é chamada.
+
+ -OBS: O 'this' perde seu direcionamento(herança) ao ser atribuído a uma nova varável.
+
+
+*CONST NOME = () {} FUN.ARROW: 	O 'this' é herdado do contexto onde foi criada (léxico)
