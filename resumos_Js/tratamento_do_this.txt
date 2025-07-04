@@ -7,5 +7,15 @@
 
  -OBS: O 'this' perde seu direcionamento(herança) ao ser atribuído a uma nova varável.
 
+ - Para direcionamento do 'this' forçado utiliza-se o bind();
+
+ - O método bind(), significa (vincular), bind(function ou object)
+
+----------------------------------------------------------
+
 
 *CONST NOME = () {} FUN.ARROW: 	O 'this' é herdado do contexto onde foi criada (léxico)
+
+ - 'this' aqui HERDA do pai 'escopo_principal'.
+
+ - O 'this' na arrow function funciona bem, se ele estiver aninhado dentro de uma function tradicional que está aninhada a o 'PAI' objeto literal.
