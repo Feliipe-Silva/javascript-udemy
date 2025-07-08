@@ -11,6 +11,8 @@
 
  - O método bind(), significa (vincular), bind(function ou object)
 
+ - Reusabilidade/Genérico: Se você um dia mudar o nome do seu objeto de 'calculadora' para 'minhaCalculadora' ou se a lógica for encapsulada em uma classe onde o nome da instância não é fixo, o this se adapta automaticamente. Você não precisa refatorar o nome do objeto em cada lugar.
+
 ----------------------------------------------------------
 
 
@@ -19,3 +21,14 @@
  - 'this' aqui HERDA do pai 'escopo_principal'.
 
  - O 'this' na arrow function funciona bem, se ele estiver aninhado dentro de uma function tradicional que está aninhada a o 'PAI' objeto literal.
+
+
+
+
+	***TRATAMENTO DO 'BIND()'***
+
+ O 'bind()' tem dois propósitos principais, e a forma como ele lida com o "pai" ou "direcionamento" é mais sobre o this do que sobre a estrutura "fora de funções e objeto literal".
+
+ - O 'bind(') serve para passar argumentos pré-definidos para uma função. Esses argumentos serão os primeiros a serem usados quando a nova função ligada for chamada.
+
+ - O 'bind()' serve para fixar o valor do 'this' para uma função tradicional. Ele garante que, quando a nova função ligada for executada, seu this sempre apontará para o objeto que você especificou, mesmo que a função seja "descolada" de seu contexto original (como ao ser passada para uma variável ou um callback).
