@@ -49,16 +49,16 @@ exemplo01.exem_filho01();
 
 
 const objPrincipal = {
-  nome: "Objeto Pai",
-  metodoPrincipal: function() { // this aqui é 'objPrincipal'
-    console.log("this em metodoPrincipal:", this.nome);
+    nome: "Objeto Pai",
+    metodoPrincipal: function() { // this aqui é 'objPrincipal'
+        console.log("this em metodoPrincipal:", this.nome);
 
-    const metodoAninhadoArrow = () => {
-      // this aqui APONTA para 'objPrincipal' (herdou de metodoPrincipal)
-      console.log("this em metodoAninhadoArrow:", this.nome);
-    };
-    metodoAninhadoArrow();
-  }
+        const metodoAninhadoArrow = () => {
+            // this aqui APONTA para 'objPrincipal' (herdou de metodoPrincipal)
+            console.log("this em metodoAninhadoArrow:", this.nome);
+        };
+        metodoAninhadoArrow();
+    }
 };
 
 console.log("\n--- Método de Objeto com Arrow Aninhada ---");
@@ -67,3 +67,57 @@ objPrincipal.metodoPrincipal();
 // this em metodoPrincipal: Objeto Pai
 // this em metodoAninhadoArrow: Objeto Pai
 
+
+
+
+                // ----- TRATAMENTO DO 'BIND()' --------//
+
+
+function somar(a, b, c) {
+    return a + b + c;
+};
+
+// Criando uma nova função 'somarComDez'
+// O primeiro argumento de bind é para 'this' (aqui não precisamos, então 'null')
+// Os argumentos seguintes são para a função original (aqui, '10')
+const somarComDez = somar.bind(null, 10);
+
+console.log('\n' + somarComDez(5, 2)); // É como chamar somar(10, 5, 2)
+// Saída: 17
+
+
+
+function logar(tipo, mensagem) {
+    console.log('\n' + `[${tipo.toUpperCase()}]: ${mensagem}`);
+};
+
+// Criando funções de log mais específicas
+const logErro = logar.bind(null, 'erro');   // Fixa 'tipo' como 'ERRO'
+const logInfo = logar.bind(null, 'info');   // Fixa 'tipo' como 'INFO'
+const logAviso = logar.bind(null, 'aviso');     // Fixa 'tipo' como 'AVISO'
+
+logErro('Usuário não autenticado.');   // Saída: [ERRO]: Usuário não autenticado.
+logInfo('Dados carregados com sucesso.');   // Saída: [INFO]: Dados carregados com sucesso.
+logAviso('Conexão instável.');        // Saída: [AVISO]: Conexão instável.
+
+
+
+const calculadora = {
+    historico: [],
+    adicionarAoHistorico: function(operacao, resultado) {
+    this.historico.push(`${operacao}: ${resultado}`);
+    console.log(`Histórico: ${this.historico.join(', ')}`);
+    },
+
+    multiplicar: function(a, b) {
+    const resultado = a * b;
+    // Aqui usamos 'bind' para fixar 'this' à 'calculadora'
+    // E para pré-definir a 'operacao' como 'Multiplicação'
+    this.adicionarAoHistorico.bind(this, 'Multiplicação')(resultado);
+    return resultado;
+    }
+};
+
+calculadora.multiplicar(5, 3);
+// Saída:
+// Histórico: Multiplicação: 15
