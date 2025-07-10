@@ -27,7 +27,7 @@
 
 	***TRATAMENTO DO 'BIND()'***
 
- O 'bind()' tem dois propósitos principais, e a forma como ele lida com o "pai" ou "direcionamento" é mais sobre o this do que sobre a estrutura "fora de funções e objeto literal".
+ -OBS: O 'bind()' tem dois propósitos principais, e a forma como ele lida com o "pai" ou "direcionamento" é mais sobre o this do que sobre a estrutura "fora de funções e objeto literal".
 
  - O 'bind(') serve para passar argumentos pré-definidos para uma função. Esses argumentos serão os primeiros a serem usados quando a nova função ligada for chamada.
 
