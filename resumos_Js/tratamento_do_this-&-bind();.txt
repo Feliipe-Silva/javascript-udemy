@@ -9,11 +9,14 @@
 
  - Para direcionamento do 'this' forçado utiliza-se o bind();
 
+ - Ou criar uma 'Closure', colocar o 'this' em uma nova variável (const _this = this;).
+
  - O método bind(), significa (vincular), bind(function ou object)
 
  - Reusabilidade/Genérico: Se você um dia mudar o nome do seu objeto de 'calculadora' para 'minhaCalculadora' ou se a lógica for encapsulada em uma classe onde o nome da instância não é fixo, o this se adapta automaticamente. Você não precisa refatorar o nome do objeto em cada lugar.
 
 ----------------------------------------------------------
+
 
 
 *CONST NOME = () {} FUN.ARROW: 	O 'this' é herdado do contexto onde foi criada (léxico)
