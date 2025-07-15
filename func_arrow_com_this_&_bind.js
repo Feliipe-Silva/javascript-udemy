@@ -12,7 +12,7 @@ function pessoa() {
         };
     }, 1000)
 };
-
+// essa função é imprimida por ultimo por causa do 'setInterval()'
 new pessoa;
 
 // ----------------------------------------------
@@ -32,3 +32,22 @@ function teste() {
 
 const atribui_teste = teste();
 atribui_teste();
+
+
+// ----------------------------------------------
+
+
+
+
+let compara_com_this = function(param) {
+    return this === param;
+};
+
+console.log("Function tradicional: " + compara_com_this(global));  // mostra que 'this' aponta para obj global. E no browser é window!
+
+
+    // This tem comportamento diferente em função arrow.
+let arrow_compara = param => { return this === param};
+
+console.log("Arrow function: " + arrow_compara(global));
+// Arrow function não permite com o bind() altere o 'this'
