@@ -9,7 +9,7 @@
 
  - Para direcionamento do 'this' forçado utiliza-se o bind();
 
- - Ou criar uma 'Closure', colocar o 'this' em uma nova variável (const _this = this;).
+ - Ou crie uma 'Closure', colocar o 'this' em uma nova variável (const _this = this;).
 
  - O método bind(), significa (vincular), bind(function ou object)
 
