@@ -1,3 +1,5 @@
+                // ----- TRATAMENTO DO 'THIS' EM FUNCTION SIMPLES --------//
+                // ----- resumo no arquivo -> tratamento_do_this
 let dobro = function(a) {
     return 2 * a;
 };

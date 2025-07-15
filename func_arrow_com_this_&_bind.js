@@ -1,4 +1,5 @@
-
+                // ----- TRATAMENTO DO 'THIS' EM FUNCTION SIMPLES --------//
+                // ----- resumo no arquivo -> tratamento_do_this
 function pessoa() {
     this.idade = Number(0);
 
