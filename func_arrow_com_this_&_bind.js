@@ -35,7 +35,7 @@ atribui_teste();
 
 
 // ----------------------------------------------
-
+//      COMPARAÇÃO DO GLOBAL COM O THIS
 
 
 
@@ -44,7 +44,8 @@ let compara_com_this = function(param) {
 };
 
 console.log("Function tradicional: " + compara_com_this(global));  // mostra que 'this' aponta para obj global. E no browser é window!
-
+console.log("Colocando this para parâmetro: " + compara_com_this(this))  // saida: false
+console.log("Comparando this com this: " + (this === this)); // saída: true
 
     // This tem comportamento diferente em função arrow.
 let arrow_compara = param => { return this === param};
