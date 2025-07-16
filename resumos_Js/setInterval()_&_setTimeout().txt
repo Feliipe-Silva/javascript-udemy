@@ -1,0 +1,14 @@
+
+	**Como agendar a execução de códigos em JavaScript**
+
+ - Elas são as duas funções irmãs para lidar com operações assíncronas baseadas em tempo!
+
+ * setTimeout(): Essa função agenda a execução de um código para acontecer uma única vez, depois de um atraso especificado (em milissegundos). É como se você definisse um alarme para tocar só uma vez no futuro.
+
+
+ * setInterval(): Já esta função agenda a execução de um código para acontecer repetidamente, a cada intervalo de tempo especificado (em milissegundos), até que você a pare explicitamente. Pense nela como um despertador que continua tocando a cada poucos minutos até você desligá-lo.
+
+
+
+
+- A principal diferença, então, é a frequência: setTimeout é para uma única vez, setInterval é para repetição contínua.
