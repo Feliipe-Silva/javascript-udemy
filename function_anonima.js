@@ -2,7 +2,8 @@
     console.log("Executado imediatamente!");
 })();   
 
-//--------------------------------------------
+// -------------------------------------------------
+
 
 
 const soma = function(a, b) {   //Recebi (x, y), e repassa para (a, b)
@@ -21,3 +22,15 @@ console.log("Resultado da função anônima, chamado dentro de outra: " + imprim
 
 console.log("Função arrow: " + imprimir_resultado(5, 2, (l, m) => l - m));
 // //Função_Arrow declarada entre parênteses da função principal.
+
+
+
+// ------- FUNÇÃO ANÔNIMA COMO ÍNDICE DE OBJETO ---
+
+let pessoa = {
+    fala: function() {
+        return "Olá";
+    }
+};
+
+console.log("Object com função anônima interno: " + pessoa.fala());
