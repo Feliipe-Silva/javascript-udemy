@@ -1,0 +1,46 @@
+	** Esses métodos são chamados de métodos de iteração de array ou métodos de ordem superior porque eles recebem uma função de callback como argumento.
+
+// forEach
+// map
+// filter
+// reduce
+
+
+1. Eles precisam de uma função para iterar em um array.
+
+2. Os dados é conceitualmente similar a ter acesso ao elemento e ao índice como se você estivesse fazendo array[índice], ou exemplo: array[0].
+
+ -- elementoAtual: O valor do elemento do array na iteração atual.
+
+ -- indice: O índice (posição) do elementoAtual no array.
+
+ -- arrayCompleto: Uma referência ao array original que está sendo iterado (este é menos usado, mas está disponível).
+
+
+
+.forEach()
+----------
+
+ A função nativa *forEach* em JavaScript é usada para iterar sobre elementos de um array, executando uma função callback para cada item. Ela não retorna valores e não pode ser interrompida.
+
+
+
+.map()
+------
+ A função nativa *map* em JavaScript cria um novo array ao aplicar no array de origem, sem modificar o array indicado (o array de origem). Ideal para transformações em dados.
+
+
+
+.filter()
+---------
+ A função nativa filter em JavaScript é usada para criar um novo array contendo apenas os elementos do array original que atendem a uma condição específica (retornam true em uma função de callback).
+
+
+
+.reduce()
+---------
+ Ela é usada para reduzir um array a um único valor, aplicando uma função de callback que acumula resultados durante a iteração. OBS: necessita que o primeiro parâmetros seja o acumulador!
+
+ - O valor atual do acumulador a cada iteração, que na primeira iteração será o valor inicial que você passou para o reduce().
+
+	// arquivo -> ( func_de_callback.js )
