@@ -8,6 +8,9 @@
 
 1. Eles precisam de uma função para iterar em um array.
 
+ -- Para map(), filter() e também para reduce() se você o usa para construir um array ou objeto, é essencial atribuir o resultado a uma nova variável se você quiser manter o array transformado ou filtrado. 
+
+
 2. Os dados é conceitualmente similar a ter acesso ao elemento e ao índice como se você estivesse fazendo array[índice], ou exemplo: array[0].
 
  -- elementoAtual: O valor do elemento do array na iteração atual.
