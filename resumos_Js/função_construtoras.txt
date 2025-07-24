@@ -1,0 +1,15 @@
+//////////////////////////////////////////////////////////
+
+ Uma função construtora é uma função usada como um "molde" ou "planta" para criar novos objetos. Ela é a forma mais antiga e tradicional de simular classes em JavaScript, antes de a sintaxe class ser introduzida no ES6.
+
+ A principal característica de uma função construtora é que ela é projetada para ser chamada com a palavra-chave (new). Quando você faz isso, a função new realiza três passos principais:
+
+1. Ela cria um novo objeto vazio.
+
+2. Ela define o this dentro da função construtora para apontar para esse novo objeto.
+
+3. Ela retorna o novo objeto (mesmo que você não tenha um return explícito).
+
+
+
+ ----As arrow functions não podem ser usadas como funções construtoras. O 'this' da arrow function não é dinâmico! 
