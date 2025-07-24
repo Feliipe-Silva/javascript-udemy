@@ -44,7 +44,7 @@ console.log(num);
 // console.log(redutor);
 
 
-
+//-----------------------------------------function construction
 console.log('\n');
 
 const produto = [];
@@ -58,13 +58,34 @@ function Novo_produto(nome, valor, descricao) {
 
 let fone = new Novo_produto('Fone', 65, 'Fone gamer');
 produto.push(fone);
-console.log(produto[0]);
+// console.log(produto[0]);
 
-let mouse = new Novo_produto('Mouse gamer', 40, 'Mouser ultra Sensível');
+let mouse = new Novo_produto('Mouse gamer', 40, 'Mouser Ultra Sensível');
 produto.push(mouse);
-console.log(produto[1]);
+// console.log(produto);
 
 // Filter para interar sobre todos os produto com valor manor que 60
 let valorMenorque60 = produto.filter((produto) => produto.valor <= 60);
 
-console.log(valorMenorque60);
+console.log(`Fitrando valor menor que (60 reais). Produto: ${valorMenorque60[0].descricao} - R$:${valorMenorque60[0].valor}`);
+
+
+
+// ----------------------------------TESTE ADICIONANDO VALORES! 
+
+const arrayValores = [];
+
+function PushValores( num ) {   //function construction 
+    this.num = num;
+    console.log(`\n Valor adicionado com sucesso!`);
+};
+
+let dez = 10;
+let novoValor = new PushValores( dez );
+
+arrayValores.push(novoValor);
+console.log(arrayValores[0].num
+);
+
+
+

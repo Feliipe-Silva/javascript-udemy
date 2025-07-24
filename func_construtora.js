@@ -1,5 +1,7 @@
+                // ----- TRATAMENTO DE FUNÇÃO CONSTRUTORAS --------//
+                // ----- resumo no arquivo -> função_construtoras
 
-function Carro(velocidadeMaxima = 200, delta = 5) {
+function Carro( velocidadeMaxima = 200, delta = 5 ) {
     let velocidadeAtual = 0;
 
     this.acelerar = () => {
@@ -29,10 +31,7 @@ console.log(ferrari.getVelocidadeAtual());
 
 
 
-
-
-
-
+// -------------------- FUNÇÃO CONSTRUTORA - FORNECIDO
 
 // (É uma convenção nomeá-la com a primeira letra maiúscula)
 function Carros(marca, modelo, ano) {
@@ -53,4 +52,22 @@ const meuCarro = new Carros('Honda', 'Civic', 2022);
 const seuCarro = new Carros('Ford', 'Focus', 2018);
 
 meuCarro.descrever(); // Saída: Este carro é um Honda Civic de 2022.
-console.log(seuCarro.marca); // Saída: Ford
+console.log(seuCarro.marca + '\n'); // Saída: Ford
+
+
+
+// -------------------- FUNÇÃO CONSTRUTORA/PROTOTYPE - FORNECIDO
+
+function Moto(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+}
+
+// Adicionando um método ao prototype
+// Agora, todas as instâncias de 'Moto' compartilham o mesmo método 'ligar'
+Moto.prototype.ligar = function() {
+    console.log(`A ${this.marca} ${this.modelo} está ligada.`);
+};
+
+const minhaMoto = new Moto('Yamaha', 'XTZ 250');
+minhaMoto.ligar(); // Saída: A Yamaha XTZ 250 está ligada.
