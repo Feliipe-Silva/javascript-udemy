@@ -13,10 +13,11 @@
 4. A referência "this.tipo", entre uma class, ou func.construtora é semelhando a uma "variável", que aponta para o objeto sendo criado.
 
 
-Métodos e prototype
+**MÉTODOS E PROTOTYPE**:
 Embora você possa adicionar métodos diretamente no construtor (como no exemplo acima), a prática mais eficiente é adicionar métodos ao prototype da função construtora. Isso evita que uma nova cópia do método seja criada para cada nova instância, economizando memória.
 
 
-
+**FUNÇÕES CONTRUTORAS vs. CLASSES ES6**:
+A sintaxe class do ES6 é, na verdade, uma forma mais moderna e legível de escrever funções construtoras com prototype. Ela faz exatamente a mesma coisa "por baixo dos panos", mas com uma sintaxe mais clara, que usa constructor e extends para herança.
 
  ----As arrow functions não podem ser usadas como funções construtoras. O 'this' da arrow function não é dinâmico! 

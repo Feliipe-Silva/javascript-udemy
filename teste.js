@@ -89,3 +89,5 @@ console.log(arrayValores[0].num
 
 
 
+// ----------------------------------TESTE Classes!
+

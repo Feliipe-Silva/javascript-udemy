@@ -66,8 +66,27 @@ function Moto(marca, modelo) {
 // Adicionando um método ao prototype
 // Agora, todas as instâncias de 'Moto' compartilham o mesmo método 'ligar'
 Moto.prototype.ligar = function() {
-    console.log(`A ${this.marca} ${this.modelo} está ligada.`);
+    console.log(`A ${this.marca} ${this.modelo} está ligada. \n`);
 };
 
 const minhaMoto = new Moto('Yamaha', 'XTZ 250');
 minhaMoto.ligar(); // Saída: A Yamaha XTZ 250 está ligada.
+
+
+
+// -------------------- FUNÇÃO CONSTRUTORA/PROTOTYPE - FORNECIDO
+
+// Exemplo com sintaxe de Classe ES6 (É a mesma lógica por trás)
+class Bicicleta {
+    constructor(tipo, marchas) {
+        this.tipo = tipo;
+        this.marchas = marchas;
+    }
+
+    pedalar() {
+        console.log(`Pedalando minha ${this.tipo} de ${this.marchas} marchas.`);
+    }
+}
+
+const minhaBicicleta = new Bicicleta('Mountain Bike', 21);
+minhaBicicleta.pedalar(); // Saída: Pedalando minha Mountain Bike de 21 marchas.
