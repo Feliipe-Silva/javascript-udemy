@@ -91,3 +91,22 @@ console.log(arrayValores[0].num
 
 // ----------------------------------TESTE Classes!
 
+
+
+
+
+// ----------------------------------TESTE teste léxico!
+
+const g = "Global";
+
+function global() {
+    console.log(g);
+};
+
+
+function local() {
+    const g = "Local";
+    global();
+};
+
+local();
